@@ -16,11 +16,14 @@ Comme il y a environ 200 milliards d’étoiles dans notre galaxie, et donc pote
 
 # Fonctionnement :
 - Cleaning des données sources, l'objectif est de faire en sorte que les données soient correctement formatées pour l’entraînement du modèle. Le preprocessing est réalisé via "**Job**"
+
 - Création d'un modèle de classification entraîné sur les données qui ont été pré-traitées. Cette classification est réalisée via "**JobML**"
+
 - Pour compiler le projet, se placer dans le répertoire du projet (**cd ~/classifieur_exoplanetes**).
 Executer la commande : **sbt assembly**
+
 - Pour executer les différents jobs, se placer dans le répertoire spark (**cd ~/spark-2.0.0-bin-hadoop2.6**). 
-Exécuter la commande avec comme argument le chemin du fichier csv pré-traité : 
+Exécuter la commande avec en argument le chemin du fichier csv à traiter :
                         ./spark-submit
                         --class com.sparkProject.**JobML**
                         --master local ~/classifieur_exoplanetes/target/scala-2.11/**tp_spark-assembly-1.0.jar**
