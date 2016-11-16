@@ -14,7 +14,7 @@ Comme il y a environ 200 milliards d’étoiles dans notre galaxie, et donc pote
 
 **Données :** Les données sur les exoplanètes sont publiques et accessibles en ligne (http://exoplanetarchive.ipac.caltech.edu/index.html). Il y a déjà 3 388 exoplanètes confirmées et environ autant de faux-positifs, notre classifieur sera entraîné sur ces données. Il y a une exoplanète par ligne. La colonne des labels (ce que nous allons chercher à prédire) s'appelle "**koi_disposition**". Le contenu des colonnes du dataset est expliqué ici (http://exoplanetarchive.ipac.caltech.edu/docs/API_kepcandidate_columns.html). Le classifieur utilisera uniquement les informations venant des courbes de luminosité.
 
-**Fonctionnement :**
+# Fonctionnement :
 - Cleaning des données sources, l'objectif est de faire en sorte que les données soient correctement formatées pour l’entraînement du modèle. Le preprocessing est réalisé via "**Job**"
 - Création d'un modèle de classification entraîné sur les données qui ont été pré-traitées. Cette classification est réalisée via "**JobML**"
 - Pour compiler le projet, se placer dans le répertoire du projet (**cd ~/classifieur_exoplanetes**).
